@@ -9,4 +9,4 @@ from .models import FountainChurchMainPost
 class FountainChurchMainPostModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'fountain_church_slug': ('fountain_church_title',)}
     list_display = ['fountain_church_title','fountain_church_author','fountain_church_img']
-admin.site.register(FountainChurchMainPost, FountainChurchMainPostModelAdin)
+admin.site.register(FountainChurchMainPost, FountainChurchMainPostModelAdi)
