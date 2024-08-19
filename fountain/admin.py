@@ -1,7 +1,7 @@
 from django.contrib import admin
 # Register your models here.
 from . import models
-from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchTestimony
+from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome
 
 
 
@@ -15,7 +15,7 @@ class FountainChurchMainHeadImageModelAdmin (admin.ModelAdmin):
     list_display = ['fountain_church_img_title','fountain_church_img_author','fountain_church_img_img']
 admin.site.register(FountainChurchMainHeadImage, FountainChurchMainHeadImageModelAdmin)
 
-class FountainChurchTestimonyModelAdmin (admin.ModelAdmin):
-    list_display = ['fountain_church_testimony_title','fountain_church_testimony_author',
-                    'fountain_church_testimony_img']
-admin.site.register(FountainChurchTestimony, FountainChurchTestimonyModelAdmin)
+class FountainChurchMinisterHomeModelAdmin (admin.ModelAdmin):
+    list_display = ['fountain_church_minister_home_title','fountain_church_minister_home_author',
+                    'fountain_church_minister_home_img']
+admin.site.register(FountainChurchMinisterHome, FountainChurchMinisterHomeModelAdmin)

@@ -42,18 +42,18 @@ class FountainChurchMainHeadImage(models.Model):
         return reverse('home',)
 
 
-class FountainChurchTestimony(models.Model):
-    fountain_church_testimony_title = models.CharField(max_length=255, blank=True, null=True)
-    fountain_church_testimony_description = models.TextField()
-    fountain_church_testimony_img = models.ImageField(upload_to='testy_img/')
-    fountain_church_testimony_author = models.ForeignKey(User, on_delete=models.CASCADE)
-    fountain_church_testimony_date = models.DateTimeField (auto_now_add= True)
+class FountainChurchMinisterHome(models.Model):
+    fountain_church_minister_home_title = models.CharField(max_length=255, blank=True, null=True)
+    fountain_church_minister_home_description = models.TextField()
+    fountain_church_minister_home_img = models.ImageField(upload_to='testy_img/')
+    fountain_church_minister_home_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    fountain_church_minister_home_date = models.DateTimeField (auto_now_add= True)
 
     class Meta:
-        ordering =['-fountain_church_testimony_date']
+        ordering =['-fountain_church_minister_home_date']
     
     def __str__(self):
-        return self.fountain_church_testimony_title + ' | ' + str(self.fountain_church_testimony_author)
+        return self.fountain_church_minister_home_title + ' | ' + str(self.fountain_church_minister_home_author)
     
     def get_absolute_url(self):
         return reverse('home',)
