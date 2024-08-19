@@ -44,6 +44,7 @@ class FountainChurchMainHeadImage(models.Model):
 
 class FountainChurchMinisterHome(models.Model):
     fountain_church_minister_home_title = models.CharField(max_length=255, blank=True, null=True)
+    fountain_church_minister_home_position = models.CharField(max_length=255, blank=True, null=True)
     fountain_church_minister_home_description = models.TextField()
     fountain_church_minister_home_img = models.ImageField(upload_to='testy_img/')
     fountain_church_minister_home_author = models.ForeignKey(User, on_delete=models.CASCADE)
