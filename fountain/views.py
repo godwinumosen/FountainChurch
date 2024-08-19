@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView,ListView
 from django.contrib.auth.decorators import login_required
-from .models import FountainChurchMainPost
+from .models import FountainChurchMainPost,FountainChurchMainHeadImage
 from django.contrib import messages
 from django.urls import reverse
 from django.urls import reverse_lazy
@@ -16,3 +16,9 @@ def base (request):
 class HomeView(ListView): 
     model = FountainChurchMainPost
     template_name = 'fountainchurch/home.html'
+    
+    def get_context_data(self, **kwargs):  
+        context = super().get_context_data(**kwargs)
+    #the first fountain home images
+        context['first_images'] = FountainChurchMainHeadImage.objects.all() 
+        return context 
