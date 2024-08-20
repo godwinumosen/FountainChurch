@@ -29,3 +29,29 @@ class HomeView(ListView):
 # About page of  the fountain church webapp
 def AboutView (request):
     return render(request, 'fountainchurch/about_us.html', {})
+
+# The Contact view been implemented
+def ContactView (request):
+    email='fountain@gmail.com'
+    if request.method == 'POST':
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        message_subject = request.POST['message-subject']
+        message = request.POST['message'] 
+        messages.success(request, f'Your email was Successfully sent to Deus Magnus {message_name}..!')
+        return redirect('/message')
+    else:
+        context={
+            'email':email
+        } 
+        return render(request, 'fountainchurch/contact.html', {})
+    
+def message (request):
+    return render (request, 'fountainchurch/message.html', {})
+
+#This category is for the Whatsapp API for fountain_whatsapp_number
+def fountain_whatsapp_message(request):
+    fountain_whatsapp_number = '+2340123456'
+    fountain_whatsapp_link = f'https://api.whatsapp.com/send?phone={fountain_whatsapp_number}'
+    context = {'whatsapp_link': fountain_whatsapp_link}
+    return render(request, 'fountain_whatsapp_message.html', context)
