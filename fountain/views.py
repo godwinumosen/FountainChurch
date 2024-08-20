@@ -25,3 +25,7 @@ class HomeView(ListView):
         #the minister home images testimony
         context['testimony_images'] = FountainChurchMinisterHome.objects.all()
         return context 
+    
+# About page of  the fountain church webapp
+def AboutView (request):
+    return render(request, 'fountain/about_us.html', {})
