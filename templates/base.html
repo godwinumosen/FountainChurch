@@ -54,9 +54,15 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
                 <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Event</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="team.html" class="dropdown-item">Our Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
@@ -84,17 +90,22 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="{% url 'home' %}">Home</a>
+                    <a class="btn btn-link" href="{% url 'about' %}">About Us</a>
+                    <a class="btn btn-link" href="{% url 'contact' %}">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
+                    <a href="https://maps.app.goo.gl/kkrY5vSyGTRRczi38"target="_blank">
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jibowu Lagos</p>
+                    </a>
+                    <a href="https://wa.me/+2348106941149?text=Hi Fountain Church?"target="_blank"class="mb-0">
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+234012345</p>
+                    </a>
+                    <a href="mailto:fountainofthelivingwordng@gmail.com"target="_blank">
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    </a>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -105,8 +116,8 @@
 
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Support link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="{% url 'about' %}">About Us</a>
+                    <a class="btn btn-link" href="{% url 'contact' %}">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                 </div>
                 
