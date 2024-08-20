@@ -7,5 +7,6 @@ urlpatterns = [
     #path('index/', views.index, name='index'),
     path('', HomeView.as_view(), name="home"),
     path('home/', HomeView.as_view(), name='home'),
+    path('about/', views.AboutView, name='about'),
     
 ]

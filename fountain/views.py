@@ -28,4 +28,4 @@ class HomeView(ListView):
     
 # About page of  the fountain church webapp
 def AboutView (request):
-    return render(request, 'fountain/about_us.html', {})
+    return render(request, 'fountainchurch/about_us.html', {})
