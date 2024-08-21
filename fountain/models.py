@@ -63,6 +63,7 @@ class FountainChurchMinisterHome(models.Model):
 class ChurchEvent(models.Model):
     Events_title = models.CharField(max_length=255, blank=True, null=True)
     Events_time = models.CharField(max_length=255, blank=True, null=True)
+    Events_date_event = models.CharField(max_length=255, blank=True, null=True)
     Events_description = models.TextField()
     Events_slug = models.SlugField(max_length=255, blank=True, null=True)
     Events_img = models.ImageField(upload_to='events_img/')
