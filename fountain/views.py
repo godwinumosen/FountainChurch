@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView,ListView
 from django.contrib.auth.decorators import login_required
 from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome
-from .models import ChurchEvent
+from .models import ChurchEvent, ChurchBlog
 from django.contrib import messages
 from django.urls import reverse
 from django.urls import reverse_lazy
@@ -63,5 +63,5 @@ class EventsView(ListView):
 
 #The main Fountain church Event and news page
 class BlogView(ListView): 
-    model = ChurchEvent
+    model = ChurchBlog
     template_name = 'fountainchurch/blog.html'
