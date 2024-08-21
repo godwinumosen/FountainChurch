@@ -1,7 +1,7 @@
 from django.contrib import admin
 # Register your models here.
 from . import models
-from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome
+from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome, ChurchEvent
 
 
 
@@ -19,3 +19,8 @@ class FountainChurchMinisterHomeModelAdmin (admin.ModelAdmin):
     list_display = ['fountain_church_minister_home_title','fountain_church_minister_home_author',
                     'fountain_church_minister_home_img']
 admin.site.register(FountainChurchMinisterHome, FountainChurchMinisterHomeModelAdmin)
+
+class ChurchEventModelAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'Events_slug': ('Events_title',)}
+    list_display = ['Events_title','Events_author','Events_img','Events_description']
+admin.site.register(ChurchEvent, ChurchEventModelAdmin)

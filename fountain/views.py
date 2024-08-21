@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView,ListView
 from django.contrib.auth.decorators import login_required
 from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome
-#from .models import
+from .models import ChurchEvent
 from django.contrib import messages
 from django.urls import reverse
 from django.urls import reverse_lazy
@@ -55,3 +55,8 @@ def fountain_whatsapp_message(request):
     fountain_whatsapp_link = f'https://api.whatsapp.com/send?phone={fountain_whatsapp_number}'
     context = {'whatsapp_link': fountain_whatsapp_link}
     return render(request, 'fountain_whatsapp_message.html', context)
+
+#The main Fountain church Event and news page
+class EventsView(ListView): 
+    model = ChurchEvent
+    template_name = 'fountainchurch/events.html'
