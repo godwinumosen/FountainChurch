@@ -60,3 +60,8 @@ def fountain_whatsapp_message(request):
 class EventsView(ListView): 
     model = ChurchEvent
     template_name = 'fountainchurch/events.html'
+
+#The main Fountain church Event and news page
+class BlogView(ListView): 
+    model = ChurchEvent
+    template_name = 'fountainchurch/blog.html'

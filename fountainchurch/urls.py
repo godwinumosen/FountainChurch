@@ -10,8 +10,6 @@ urlpatterns = [
     path('',include ('fountain.urls')),
 ]
 
-
-
 admin.site.site_header = "The Fountain Church Admin "
 admin.site.site_title = " The Fountain"
 

@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import HomeView,EventsView#ArticleDetailView
+from .views import HomeView,EventsView, BlogView#ArticleDetailView
 
 urlpatterns = [
     #path('', views.HomeView, name='home'),
@@ -11,5 +11,6 @@ urlpatterns = [
     path('contact/', views.ContactView, name='contact'),
     path('message/', views.message, name='message'),
     path('events/', EventsView.as_view(), name="events"),
+    path('blog/', BlogView.as_view(), name='blog'),
     
 ]
