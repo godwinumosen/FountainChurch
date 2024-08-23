@@ -40,13 +40,13 @@
                             <img class="img-fluid" src="{{ post.blog_img.url }}"style="height: 250px; width: 100%; object-fit: cover;" alt="">
                         </a>
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                                <a href="{% url 'blog_detail' post.pk %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="{% url 'contact' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
                             </div>
                        
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">{{ post.blog_title|truncatechars:20}}</h3>
+                            <a href="{% url 'blog_detail' post.pk %}"> <h3 class="mb-0">{{ post.blog_title|truncatechars:20}}</h3></a>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
@@ -56,7 +56,7 @@
                             <p class="mb-4">{{ post.blog_description|truncatechars:70 }}</p>
                         </div>
                             <div class="btn-wrapper">
-                                <a href="" class="btn btn-primary" style="border-radius: 10px;">Read More</a>
+                                <a href="{% url 'blog_detail' post.pk %}" class="btn btn-primary" style="border-radius: 10px;">Read More</a>
                             </div>
                 
                     </div>
