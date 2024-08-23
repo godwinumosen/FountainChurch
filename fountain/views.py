@@ -96,3 +96,12 @@ class BlogArticleDetail(DetailView):
 class SermonsView(ListView): 
     model = ChurchSermons
     template_name = 'fountainchurch/sermons.html'
+
+#The sermons article of the blog project for fountain church
+class SermonsArticleDetail(DetailView):
+    model = ChurchSermons 
+    template_name = 'fountainchurch/sermons_article_detail.html'
+
+    def SermonsArticleDetail(request, pk):  
+        object = get_object_or_404(ChurchSermons, pk=pk)
+        return render(request, 'fountainchurch/sermons_article_detail.html', {'sermons_detail': object})
