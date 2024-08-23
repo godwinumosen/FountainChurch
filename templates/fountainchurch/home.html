@@ -111,6 +111,46 @@
     </div>
     <!-- About End -->
 
+    
+
+
+    
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Current</h6>
+                <h1 class="mb-5">Current Series</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                {% for post in object_list %}
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <a href="{% url 'detail' post.pk %}">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{{ post.fountain_church_img.url }}" style="height: 200px; width: 100%; object-fit: cover;" alt="">
+                        </div>
+                      </a>
+                        <div class="text-center p-4 pb-0">
+                            <a href="{% url 'detail' post.pk %}"><h3 class="mb-0">{{ post.fountain_church_title|truncatechars:20 }}</h3></a>
+                            <p class="mb-4">{{ post.fountain_church_description|truncatechars:70 }}</p>
+                        </div>
+                        <center>
+                            <div class="btn-wrapper">
+                                <a href="{% url 'detail' post.pk %}" class="btn btn-primary" style="border-radius: 10px;">View More</a>
+                            </div><br>
+                        </center>
+                    </div>
+                </div>
+                {% endfor %}            
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+
+
+
 
     
     <!-- Testimonial Start -->
@@ -138,39 +178,6 @@
         </div>
     </div>
     <!-- Testimonial End -->
-
-
-
-    <!-- Courses Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Current</h6>
-                <h1 class="mb-5">Current Series</h1>
-            </div>
-            <div class="row g-4 justify-content-center">
-                {% for post in object_list %}
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ post.fountain_church_img.url }}" style="height: 200px; width: 100%; object-fit: cover;" alt="">
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">{{ post.fountain_church_title|truncatechars:20 }}</h3>
-                            <p class="mb-4">{{ post.fountain_church_description|truncatechars:70 }}</p>
-                        </div>
-                        <center>
-                            <div class="btn-wrapper">
-                                <a href="" class="btn btn-primary" style="border-radius: 10px;">View More</a>
-                            </div><br>
-                        </center>
-                    </div>
-                </div>
-                {% endfor %}            
-            </div>
-        </div>
-    </div>
-    <!-- Courses End -->
 
 
 

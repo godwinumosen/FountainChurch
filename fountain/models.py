@@ -78,8 +78,6 @@ class ChurchEvent(models.Model):
     
     def get_absolute_url(self):
         return reverse('home',)
-
-
    
 #THE FOUNTAIN CHURCH Blog post
 class ChurchBlog(models.Model):

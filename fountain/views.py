@@ -25,6 +25,14 @@ class HomeView(ListView):
         #the minister home images testimony
         context['testimony_images'] = FountainChurchMinisterHome.objects.all()
         return context 
+
+ #The first fountain ArticleDetailView page
+class ArticleDetailView(DetailView):
+    model = FountainChurchMainPost
+    template_name = 'fountainchurch/article_detail.html'
+    def ArticleDetailView(request, pk): 
+        object = get_object_or_404(FountainChurchMainPost, pk=pk)
+        return render(request, 'fountainchurch/article_detail.html', {'detail': object})   
     
 # About page of  the fountain church webapp
 def AboutView (request):
@@ -60,6 +68,14 @@ def fountain_whatsapp_message(request):
 class EventsView(ListView): 
     model = ChurchEvent
     template_name = 'fountainchurch/events.html'
+
+#The event of fountain church' article details class base view
+class EventBlogArticleDetailView(DetailView):
+    model = ChurchEvent
+    template_name = 'fountainchurch/event_article.html'
+    def DeusMagnusEventBlogArticleDetailView(request, pk): 
+        object = get_object_or_404(ChurchEvent, pk=pk)
+        return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})
 
 #The main Fountain church Event and news page
 class BlogView(ListView): 
