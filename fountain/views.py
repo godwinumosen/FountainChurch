@@ -90,3 +90,9 @@ class BlogArticleDetail(DetailView):
     def BlogArticleDetail(request, pk):  
         object = get_object_or_404(ChurchBlog, pk=pk)
         return render(request, 'fountainchurch/blog_article_detail.html', {'blog_detail': object})
+
+
+#The main Fountain church sermons page
+class SermonsView(ListView): 
+    model = ChurchEvent
+    template_name = 'fountainchurch/sermons.html'

@@ -96,6 +96,28 @@ class ChurchBlog(models.Model):
     
     def get_absolute_url(self):
         return reverse('home',)
+    
+
+# The sermons model for fountain church category
+class ChurchSermons(models.Model):
+    sermons_title = models.CharField(max_length=255, blank=True, null=True)
+    sermons_description = models.TextField()
+    sermons_preach_by = models.CharField(max_length=100, blank=True, null=True)
+    sermons_slug = models.SlugField (max_length=255,blank=True, null=True)
+    sermons_video = models.FileField(upload_to='videos/') 
+    sermons_youtube_video_link = models.TextField()
+    sermons_publish_date = models.DateTimeField (auto_now_add= True)
+    sermons_author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+       
+    class Meta:
+        ordering =['-sermons_publish_date']
+    
+    def __str__(self):
+        return self.sermons_title + ' | ' + str(self.sermons_author)
+    
+    def get_absolute_url(self):
+        return reverse('home')
 
 
 
