@@ -4,8 +4,8 @@ from django.urls import reverse
 from datetime import datetime, date
 
 #The search button model of locatin
-'''class Mainvideo(models.Model):
-    deus_magnus_first_video = models.FileField(upload_to='main_videos/') '''
+'''class Mainpicture(models.Model):
+    deus_magnus_first_video = models.ImageField(upload_to='main_img/') '''
 # The main model for Deus Magnus Model category
 class FountainChurchMainPost(models.Model):
     fountain_church_title = models.CharField(max_length=255, blank=True, null=True)
@@ -101,6 +101,7 @@ class ChurchBlog(models.Model):
 # The sermons model for fountain church category
 class ChurchSermons(models.Model):
     sermons_title = models.CharField(max_length=255, blank=True, null=True)
+    Sermons_time = models.CharField(max_length=255, blank=True, null=True)
     sermons_description = models.TextField()
     sermons_preach_by = models.CharField(max_length=100, blank=True, null=True)
     sermons_slug = models.SlugField (max_length=255,blank=True, null=True)
@@ -108,7 +109,6 @@ class ChurchSermons(models.Model):
     sermons_youtube_video_link = models.TextField()
     sermons_publish_date = models.DateTimeField (auto_now_add= True)
     sermons_author = models.ForeignKey(User, on_delete=models.CASCADE)
-
        
     class Meta:
         ordering =['-sermons_publish_date']
