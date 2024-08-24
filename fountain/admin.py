@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome
-from .models import ChurchBlog, ChurchEvent,ChurchSermons
+from .models import ChurchBlog, ChurchEvent,ChurchSermons,ChurchGalary
 
 
 #The Fountain Church Main Admin Post
@@ -34,3 +34,7 @@ class ChurchSermonsModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'sermons_slug': ('sermons_title',)}
     list_display = ['sermons_title','sermons_author','sermons_video','sermons_description']
 admin.site.register(ChurchSermons, ChurchSermonsModelAdmin)
+
+class ChurchGalaryModelAdmin (admin.ModelAdmin):
+    list_display = ['galary_title','galary_author','galary_img']
+admin.site.register(ChurchGalary, ChurchGalaryModelAdmin)

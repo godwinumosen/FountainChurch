@@ -119,8 +119,21 @@ class ChurchSermons(models.Model):
     def get_absolute_url(self):
         return reverse('home')
 
+# The church galary of fountain church
+class ChurchGalary(models.Model):
+    galary_title = models.CharField(max_length=255, blank=True, null=True)
+    galary_img = models.ImageField(upload_to='blog_img/')
+    galary_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    galary_date = models.DateTimeField (auto_now_add= True)
 
-
+    class Meta:
+        ordering =['-galary_date']
+    
+    def __str__(self):
+        return self.galary_title + ' | ' + str(self.galary_author)
+    
+    def get_absolute_url(self):
+        return reverse('home',)
 
 
 
