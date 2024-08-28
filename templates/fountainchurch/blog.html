@@ -37,7 +37,7 @@
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
                             <a href="{% url 'blog_detail' post.pk %}">
-                            <img class="img-fluid" src="{{ post.blog_img.url }}"style="height: 250px; width: 100%; object-fit: cover;" alt="">
+                            <img class="img-fluid" src="{{ post.blog_img.url }}"style="height: 250px; width: 100%; object-fit: cover; border-radius:5px;" alt="">
                         </a>
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="{% url 'blog_detail' post.pk %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 10 10 30px;">Read More</a>
