@@ -2,9 +2,13 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome
-from .models import ChurchBlog, ChurchEvent,ChurchSermons,ChurchGalary,Pastors
+from .models import ChurchBlog, ChurchEvent,ChurchSermons,ChurchGalary,Pastors,Mainpicture
 
 
+#The Fountain Church Main Admin Post
+class MainpictureModelAdmin (admin.ModelAdmin):
+
+    admin.site.register(Mainpicture)
 #The Fountain Church Main Admin Post
 class FountainChurchMainPostModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'fountain_church_slug': ('fountain_church_title',)}
