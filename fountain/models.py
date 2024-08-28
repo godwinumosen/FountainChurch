@@ -3,9 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 
-#The main picture model of locatin
-class Mainpicture(models.Model):
-    fountain_first_img = models.ImageField(upload_to='main_img/')
+
 # The main model for Deus Magnus Model category
 class FountainChurchMainPost(models.Model):
     fountain_church_title = models.CharField(max_length=255, blank=True, null=True)
