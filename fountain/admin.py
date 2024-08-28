@@ -15,7 +15,7 @@ class FountainChurchMainHeadImageModelAdmin (admin.ModelAdmin):
     list_display = ['fountain_church_img_title','fountain_church_img_author','fountain_church_img_img']
 admin.site.register(FountainChurchMainHeadImage, FountainChurchMainHeadImageModelAdmin)
 
-lass FountainChurchMinisterHomeModelAdmin (admin.ModelAdmin):
+class FountainChurchMinisterHomeModelAdmin (admin.ModelAdmin):
     list_display = ['fountain_church_minister_home_title','fountain_church_minister_home_author',
                     'fountain_church_minister_home_img']
 admin.site.register(FountainChurchMinisterHome, FountainChurchMinisterHomeModelAdmin)
