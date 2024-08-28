@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView,ListView
 from django.contrib.auth.decorators import login_required
 from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome
-from .models import ChurchEvent, ChurchBlog, ChurchSermons,ChurchGalary
+from .models import ChurchEvent, ChurchBlog, ChurchSermons,ChurchGalary,Pastors
 from django.contrib import messages
 from django.urls import reverse
 from django.urls import reverse_lazy
@@ -119,3 +119,9 @@ class GalaryArticleDetail(DetailView):
     def GalaryArticleDetail(request, pk):  
         object = get_object_or_404(ChurchGalary, pk=pk)
         return render(request, 'fountainchurch/galary_article_detail.html', {'galary_detail': object})
+    
+
+#The pastor view Fountain church page
+class PastorsView(ListView): 
+    model = Pastors
+    template_name = 'fountainchurch/pastors.html'

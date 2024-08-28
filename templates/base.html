@@ -53,16 +53,12 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
-                <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ministries </a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About </a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Pastors</a>
-                        <a href="testimonial.html" class="dropdown-item">Choir's Ministry</a>
-                        <a href="testimonial.html" class="dropdown-item">Men's Ministry</a>
-                        <a href="testimonial.html" class="dropdown-item">Women's Ministry</a>
-                        <a href="testimonial.html" class="dropdown-item">Children's Ministry</a>
-                        <a href="testimonial.html" class="dropdown-item">Prayer Ministry</a>
+                        <a href="{% url 'about' %}" class="dropdown-item">About Us</a>
+                        <a href="{% url 'pastors' %}" class="dropdown-item">Pastors</a>
+                        
                     </div>
                 </div>
                 <a href="{% url 'sermons' %}" class="nav-item nav-link">Sermons</a>
@@ -76,7 +72,7 @@
                 </div>
                 <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="{% url 'contact' %}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->

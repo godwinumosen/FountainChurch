@@ -29,7 +29,7 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3"> Blog Post</h6>
-                <h1 class="mb-5">Church Blog</h1>
+                <h1 class="mb-5"style="color: #d4af37;">Church Blog</h1>
             </div>
             <div class="row g-4 justify-content-center">
                 {% for post in object_list %}
@@ -45,7 +45,7 @@
                        
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <a href="{% url 'blog_detail' post.pk %}"> <h4 class="mb-0">{{ post.blog_title|truncatechars:20}}</h4></a>
+                            <a href="{% url 'blog_detail' post.pk %}"> <h4 class="mb-0"style="color: #d4af37;">{{ post.blog_title|truncatechars:20}}</h4></a>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>

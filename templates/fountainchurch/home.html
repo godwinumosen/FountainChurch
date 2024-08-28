@@ -133,7 +133,7 @@
                         </div>
                       </a>
                         <div class="text-center p-4 pb-0">
-                            <a href="{% url 'detail' post.pk %}"><h4 class="mb-0">{{ post.fountain_church_title|truncatechars:20 }}</h4></a>
+                            <a href="{% url 'detail' post.pk %}"><h4 class="mb-0"style="color: #d4af37;">{{ post.fountain_church_title|truncatechars:20 }}</h4></a>
                             <p class="mb-4">{{ post.fountain_church_description|truncatechars:70 }}</p>
                         </div>
                         <center>
@@ -161,12 +161,12 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Witnesses of Grace</h6>
                 <h4 class="mb-2">Welcome to our "Witnesses of Grace" section, where we share the powerful 
                     stories and testimonies of how God's grace has transformed lives within our community.</h4>
-            </div>
+            </div><br><br>
             <div class="owl-carousel testimonial-carousel position-relative" style="border-radius: 15px; overflow: hidden;">
                 {% for testimony_image in testimony_images %}
                 <div class="testimonial-item text-center" style="border-radius: 5px; overflow: hidden;">
                     <img class="border rounded-circle p-2 mx-auto mb-3" src="{{ testimony_image.fountain_church_minister_home_img.url }}" style="width: 80px; height: 80px; border-radius: 50%;">
-                    <h5 class="mb-0">{{ testimony_image.fountain_church_minister_home_title }}</h5>
+                    <h5 class="mb-0"style="color: #d4af37;">{{ testimony_image.fountain_church_minister_home_title }}</h5>
                     <p>{{ testimony_image.fountain_church_minister_home_position }}</p>
                     <div class="testimonial-text bg-light text-center p-4" style="border-radius: 15px;">
                         <p class="mb-0">{{ testimony_image.fountain_church_minister_home_description }}</p>
