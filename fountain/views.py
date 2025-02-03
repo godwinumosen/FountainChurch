@@ -132,3 +132,6 @@ class GalaryArticleDetail(DetailView):
 class PastorsView(ListView): 
     model = Pastors
     template_name = 'fountainchurch/pastors.html'
+    
+def vision (request):
+    return render (request, 'fountainchurch/vision.html', {})
