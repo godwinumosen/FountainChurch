@@ -116,6 +116,24 @@ class ChurchVideoSermons(models.Model):
     
     def get_absolute_url(self):
         return reverse('home')
+    
+# The Audio sermons model for fountain church category
+class ChurchAudioSermons(models.Model):
+    audio_Sermons_time = models.CharField(max_length=255, blank=True, null=True)
+    audio_sermons_title = models.TextField(max_length=255, blank=True, null=True)
+    audio_sermons_preach_by = models.CharField(max_length=100, blank=True, null=True)
+    audio_sermons = models.FileField(upload_to='audio/') 
+    audio_sermons_publish_date = models.DateTimeField (auto_now_add= True)
+    audio_sermons_author = models.ForeignKey(User, on_delete=models.CASCADE)
+       
+    class Meta:
+        ordering =['-audio_sermons_publish_date']
+    
+    def __str__(self):
+        return self.audio_sermons_title + ' | ' + str(self.audio_sermons_author)
+    
+    def get_absolute_url(self):
+        return reverse('home')
 
 # The church galary of fountain church
 class ChurchGalary(models.Model):
