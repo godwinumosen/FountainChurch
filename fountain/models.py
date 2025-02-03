@@ -97,7 +97,7 @@ class ChurchBlog(models.Model):
     
 
 # The sermons model for fountain church category
-class ChurchSermons(models.Model):
+class ChurchVideoSermons(models.Model):
     sermons_title = models.CharField(max_length=255, blank=True, null=True)
     Sermons_time = models.CharField(max_length=255, blank=True, null=True)
     sermons_description = models.TextField()
