@@ -120,7 +120,7 @@ class ChurchVideoSermons(models.Model):
 # The Audio sermons model for fountain church category
 class ChurchAudioSermons(models.Model):
     audio_Sermons_time = models.CharField(max_length=255, blank=True, null=True)
-    audio_sermons_title = models.TextField(max_length=255, blank=True, null=True)
+    audio_sermons_title = models.TextField(max_length=255)
     audio_sermons_preach_by = models.CharField(max_length=100, blank=True, null=True)
     audio_sermons = models.FileField(upload_to='audio/') 
     audio_sermons_publish_date = models.DateTimeField (auto_now_add= True)
