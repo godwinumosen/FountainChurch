@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import FountainChurchMainPost,FountainChurchMainHeadImage,FountainChurchMinisterHome
-from .models import ChurchBlog, ChurchEvent,ChurchSermons,ChurchGalary,Pastors
+from .models import ChurchBlog, ChurchEvent,ChurchSermons,ChurchGalary,Pastors,Contactvideo
 
 
 #The Fountain Church Main Admin Post
@@ -42,3 +42,7 @@ admin.site.register(ChurchGalary, ChurchGalaryModelAdmin)
 class PastorsModelAdmin (admin.ModelAdmin):
     list_display = ['pastor_name','pastor_author','pastor_img']
 admin.site.register(Pastors, PastorsModelAdmin)
+
+class ContactvideoModelAdmin (admin.ModelAdmin):
+    list_display = ['contact_video']
+admin.site.register(Contactvideo, ContactvideoModelAdmin)

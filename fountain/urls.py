@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 from .views import HomeView,ArticleDetailView,EventsView,EventBlogArticleDetailView,BlogView,PastorsView
-from .views import BlogArticleDetail,SermonsView,SermonsArticleDetail,GalaryView,GalaryArticleDetail
+from .views import BlogArticleDetail,SermonsView,SermonsArticleDetail,GalaryView,GalaryArticleDetail,ContactView
 
 urlpatterns = [
     #path('', views.HomeView, name='home'),
@@ -11,6 +11,7 @@ urlpatterns = [
     path('article/<int:pk>/', ArticleDetailView.as_view(), name="detail"),
     path('about/', views.AboutView, name='about'),
     path('contact/', views.ContactView, name='contact'),
+    path('contact/', ContactView.as_view(), name='contact'),
     path('message/', views.message, name='message'),
     path('events/', EventsView.as_view(), name="events"),
     path('events_article_detail/<int:pk>/', EventBlogArticleDetailView.as_view(), name='events_article_detail'),

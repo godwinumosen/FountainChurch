@@ -61,22 +61,28 @@
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About </a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="{% url 'about' %}" class="dropdown-item">About Us</a>
-                        <a href="{% url 'pastors' %}" class="dropdown-item">Pastors</a>
+                        <a href="{% url 'pastors' %}" class="dropdown-item">Ministers</a>
                         
                     </div>
                 </div>
-                <a href="{% url 'sermons' %}" class="nav-item nav-link">Sermons</a>
+                
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Sermons</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="{% url 'sermons' %}" class="dropdown-item"> Video Sermons</a>
+                        <a href=" " class="dropdown-item"> Audio Sermons</a>
+                    </div>
+                </div>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Media</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="{% url 'events' %}" class="dropdown-item">News & Events</a>
                         <a href="{% url 'blog' %}" class="dropdown-item">Blog</a>
-                        <a href="{% url 'galary' %}" class="dropdown-item">Galary</a>
+                        <a href="{% url 'galary' %}" class="dropdown-item">Galleries</a>
                     </div>
                 </div>
-                <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="{% url 'contact' %}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="{% url 'contact' %}" class="btn btn-primary py-4 px-lg-5 ">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->

@@ -150,5 +150,8 @@ class Pastors (models.Model):
     def get_absolute_url(self):
         return reverse('home',)
 
+class Contactvideo(models.Model):
+    contact_video = models.FileField(upload_to='contact_videos/')               
+
 
 
