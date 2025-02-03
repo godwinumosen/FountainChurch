@@ -53,7 +53,7 @@ class ContactView(ListView):
             message_email = request.POST['message-email']
             message_subject = request.POST['message-subject']
             message = request.POST['message'] 
-            messages.success(request, f'Your email was Successfully sent to Deus Magnus {message_name}..!')
+            messages.success(request, f'Your email was Successfully sent to Church admin {message_name}..!')
             return redirect('/message')
         else:
             context={
@@ -61,8 +61,8 @@ class ContactView(ListView):
             } 
             return render(request, 'fountainchurch/contact.html', {})
         
-    def message (request):
-        return render (request, 'fountainchurch/message.html', {})
+def message (request):
+    return render (request, 'fountainchurch/message.html', {})
 
 #This category is for the Whatsapp API for fountain_whatsapp_number
 def fountain_whatsapp_message(request):
