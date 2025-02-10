@@ -119,6 +119,15 @@ class SermonsAudioView(ListView):
     model = ChurchAudioSermons
     template_name = 'fountainchurch/audio_sermons.html'
     
+#The AUDIO sermons article of the blog project for fountain church
+class AudioSermonsArticleDetail(DetailView):
+    model = ChurchAudioSermons 
+    template_name = 'fountainchurch/audio_article_detail.html'
+
+    def AudioSermonsArticleDetail(request, pk):  
+        object = get_object_or_404(ChurchAudioSermons, pk=pk)
+        return render(request, 'fountainchurch/audio_article_detail.html', {'audio_sermons_detail': object})
+    
 #The main Fountain church sermons page
 class GalaryView(ListView): 
     model = ChurchGalary

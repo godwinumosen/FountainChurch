@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}{{ object.sermons_title }}{% endblock %}
+{% block title %}{{ object.audio_sermons_title }}{% endblock %}
 {% block content%}
 
   <!-- Header Start -->
@@ -22,38 +22,16 @@
 <!-- Header End -->
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <p class="mb-4">{{ object.sermons_publish_date }}</p>
-            <div class="row g-5">
-                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img ct="" style="object-fit: cover; border-radius: 10px;">
-                        <video autoplay muted playsinline loop width="100%"style="border-radius: 5px;" controls >
-                            <source src="{{ object.sermons_video.url }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-                <div class="col-lg-9 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">  </h6>
-                    <h1 class="mb-4"style="color: #d4af37;">{{ object.sermons_title }}</h1>
-                    <p class="mb-4">{{ object.sermons_description }}</p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ object.Sermons_time }}</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Posted by: Church</p>
-                        </div>
-                    </div>
-                    <div class="btn-wrapper">
-                            <a href=""onclick="history.back(); return false;" class="btn btn-primary py-3 px-5 mt-2"style="border-radius: 10px;"><i class="fa fa-arrow-left"> Back </i></a>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
+    
+        <audio loop controls width="100%" height="40%" style="width: 100%; object-fit: cover; border-radius: 5px;">
+            <source src="{{ object.audio_sermons.url }}" type="audio/mp4">
+            Your browser does not support the audio tag.
+        </audio>
+          <center><h5 class="mb-4"style="color: #d4af37;">{{ object.audio_sermons_title }}</h5></center>
+</div>
+<div class="d-flex border-top">
+    <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>Sermon by:{{ object.audio_sermons_preach_by }}</small>
+    <small class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">{{ object.audio_sermons_publish_date }}</small>
+</div>
 
     {% endblock %}
