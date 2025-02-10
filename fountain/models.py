@@ -125,7 +125,6 @@ class ChurchAudioSermons(models.Model):
     audio_sermons = models.FileField(upload_to='audio/') 
     audio_sermons_publish_date = models.DateTimeField (auto_now_add= True)
     audio_sermons_author = models.ForeignKey(User, on_delete=models.CASCADE)
-    sermon_image = models.ImageField(upload_to='sermon_images/', blank=True, null=True)
        
     class Meta:
         ordering =['-audio_sermons_publish_date']
