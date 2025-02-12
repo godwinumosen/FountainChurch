@@ -118,7 +118,7 @@ class SermonsArticleDetail(DetailView):
 class SermonsAudioView(ListView): 
     model = ChurchAudioSermons
     template_name = 'fountainchurch/audio_sermons.html'
-    
+
 #The AUDIO sermons article of the blog project for fountain church
 class AudioSermonsArticleDetail(DetailView):
     model = ChurchAudioSermons 
