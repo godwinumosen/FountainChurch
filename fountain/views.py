@@ -88,7 +88,7 @@ class EventBlogArticleDetailView(DetailView):
 #The main Fountain church Event and news page
 class BlogView(ListView): 
     model = ChurchBlog
-    template_name = 'fountainchurch/blog.html'
+    template_name = 'fountainchurch/blog.html
 
 #The blog article of the blog project for fountain church
 class BlogArticleDetail(DetailView):
