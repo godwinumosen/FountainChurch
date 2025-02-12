@@ -90,7 +90,6 @@ class BlogView(ListView):
     model = ChurchBlog
     template_name = 'fountainchurch/blog.html'
 
-
 #The blog article of the blog project for fountain church
 class BlogArticleDetail(DetailView):
     model = ChurchBlog 
