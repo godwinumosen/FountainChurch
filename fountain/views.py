@@ -93,7 +93,7 @@ class BlogView(ListView):
 #The blog article of the blog project for fountain church
 class BlogArticleDetail(DetailView):
     model = ChurchBlog 
-    template_name = 'fountainchurch/blog_article_detail.html
+    template_name = 'fountainchurch/blog_article_detail.html'
 
     def BlogArticleDetail(request, pk):  
         object = get_object_or_404(ChurchBlog, pk=pk)
