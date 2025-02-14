@@ -69,7 +69,7 @@ def message (request):
 def fountain_whatsapp_message(request):
     fountain_whatsapp_number = '+2340123456'
     fountain_whatsapp_link = f'https://api.whatsapp.com/send?phone={fountain_whatsapp_number}'
-    context = {'whatsapp_link': fountain_whatsapp_link}
+    context = {'whatsapp_link': fountain_whatsapp_link} 
     return render(request, 'fountain_whatsapp_message.html', context)
 
 #The main Fountain church Event and news page
