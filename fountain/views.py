@@ -63,7 +63,7 @@ class ContactView(ListView):
             return render(request, 'fountainchurch/contact.html', {})
         
 def message (request):
-    return render (request, 'fountainchurch/message.html',{})
+    return render (request, 'fountainchurch/message.html', {})
 
 #This category is for the Whatsapp API for fountain_whatsapp_number
 def fountain_whatsapp_message(request):
