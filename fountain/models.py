@@ -76,24 +76,6 @@ class ChurchEvent(models.Model):
     
     def get_absolute_url(self):
         return reverse('home',)
-   
-#THE FOUNTAIN CHURCH Blog post
-class ChurchBlog(models.Model):
-    blog_title = models.CharField(max_length=255, blank=True, null=True)
-    blog_description = models.TextField()
-    blog_slug = models.SlugField(max_length=255, blank=True, null=True)
-    blog_img = models.ImageField(upload_to='blog_img/')
-    blog_author = models.ForeignKey(User, on_delete=models.CASCADE)
-    blog_date = models.DateTimeField (auto_now_add= True)
-
-    class Meta:
-        ordering =['-blog_date']
-    
-    def __str__(self):
-        return self.blog_title + ' | ' + str(self.blog_author)
-    
-    def get_absolute_url(self):
-        return reverse('home',)
     
 
 # The sermons model for fountain church category
