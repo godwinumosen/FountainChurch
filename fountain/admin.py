@@ -12,7 +12,7 @@ class FountainChurchMainPostModelAdmin (admin.ModelAdmin):
 admin.site.register(FountainChurchMainPost, FountainChurchMainPostModelAdmin)
 
 class FountainChurchMainHeadImageModelAdmin (admin.ModelAdmin):
-    list_display = ['fountain_church_img_title','fountain_church_img_author','fountain_church_img_img']
+    list_display = ['fountain_church_img_title','fountain_church_img_author']
 admin.site.register(FountainChurchMainHeadImage, FountainChurchMainHeadImageModelAdmin)
 
 class FountainChurchMinisterHomeModelAdmin (admin.ModelAdmin):

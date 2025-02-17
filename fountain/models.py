@@ -26,7 +26,8 @@ class FountainChurchMainPost(models.Model):
 class FountainChurchMainHeadImage(models.Model):
     fountain_church_img_title = models.CharField(max_length=255, blank=True, null=True)
     fountain_church_img_description = models.TextField()
-    fountain_church_img_img = models.ImageField(upload_to='img/')
+    #fountain_church_img_img = models.ImageField(upload_to='img/')
+    fountain_church_video = models.FileField(upload_to='head_videos/') 
     fountain_church_img_author = models.ForeignKey(User, on_delete=models.CASCADE)
     fountain_church_img_date = models.DateTimeField (auto_now_add= True)
 
