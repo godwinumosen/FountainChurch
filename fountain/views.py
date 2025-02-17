@@ -85,20 +85,6 @@ class EventBlogArticleDetailView(DetailView):
         object = get_object_or_404(ChurchEvent, pk=pk)
         return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})
 
-#The main Fountain church Event and news page
-class BlogView(ListView): 
-    model = ChurchBlog
-    template_name = 'fountainchurch/blog.html'
-
-#The blog article of the blog project for fountain church
-class BlogArticleDetail(DetailView):
-    model = ChurchBlog 
-    template_name = 'fountainchurch/blog_article_detail.html'
-
-    def BlogArticleDetail(request, pk):  
-        object = get_object_or_404(ChurchBlog, pk=pk)
-        return render(request, 'fountainchurch/blog_article_detail.html', {'blog_detail': object})
-
 
 #The main Fountain church video sermons page
 class SermonsView(ListView): 
