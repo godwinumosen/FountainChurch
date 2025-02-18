@@ -15,8 +15,8 @@
         </div>
 
         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-            <a href="{% url 'audio_sermons'%}" class="flex-shrink-0 btn btn-lg btn-primary px-5 py-3" style="border-radius: 30px 30px; font-size: 13px;">Download Audio Message</a>
-            <a href="https://www.youtube.com/@fountainofthelivingwordchu8992" target="_blank" class="flex-shrink-0 btn btn-lg btn-primary px-5 py-3" style="border-radius: 30px 30px; font-size: 10px;">Watch Online</a>
+            <a href="{% url 'audio_sermons'%}" class="flex-shrink-0 btn btn-lg btn-primary px-5 py-3" style="border-radius: 30px 30px; font-size: 13px;font-family: 'serif';">Download Audio Message</a>
+            <a href="https://www.youtube.com/@fountainofthelivingwordchu8992" target="_blank" class="flex-shrink-0 btn btn-lg btn-primary px-5 py-3" style="border-radius: 30px 30px; font-size: 10px;font-family: 'serif';">Watch Online</a>
         </div>
         {% endfor %}
     </div>
@@ -30,12 +30,17 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 30px;">
                     <div class="wow fadeInUp" data-wow-delay="0.3s">
                         <h3 class="mb-4" style="color: #d4af37; text-align: center; font-family: 'Playfair Display';">
-                            About Fountain Of The Living Church
-                        </h3>
+                            Welcome to <b>Fountain of the Living Word Church</b>, where our mission is simple yet life-changing
+                        </h3><br>
                         <p class="mb-4" style="text-align: center; font-family: 'serif';">
-                            Fountain of the Living Word Nigeria, is a Pentecostal faith-based church, 
-                            affiliated with the Fountain of the Living Word, East Orange, 
-                            New Jersey, US. It is one of the fast-growing churches with a focus on God's word. We teach the truth and shape lives.
+                            <b>Teaching Truth, Shaping Lives</b>. We believe 
+                            in the power of God’s Word to transform hearts and guide us in faith. 
+                            Here, you will find a loving community where grace abounds, worship 
+                            is heartfelt, and truth is taught in a way that strengthens and 
+                            equips you for life. Whether you're searching for answers, 
+                            growing in faith, or looking for a spiritual home, know that <b>you are 
+                            not here by accident</b>—God has a purpose for your life, and we would 
+                            love to walk alongside you on your journey. Welcome home, <b>Pastor Tunde Fasoranti.</b>
                         </p>
                     </div>
                 </div>
@@ -50,8 +55,8 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Current</h6>
-                <h1 class="mb-5" style="color: #d4af37;">Current Series</h1>
+               
+                <h1 class="mb-5" style="color: #d4af37;font-family: 'serif';">Current Series</h1>
             </div>
             <div class="row g-4 justify-content-center">
                 {% for post in object_list %}
@@ -64,9 +69,9 @@
                         </a>
                         <div class="text-center p-4 pb-0">
                             <a href="{% url 'detail' post.pk %}">
-                                <h4 class="mb-0" style="color: #d4af37;">{{ post.fountain_church_title|truncatechars:20 }}</h4>
+                                <h4 class="mb-0" style="color: #d4af37;font-family: 'Playfair';">{{ post.fountain_church_title|truncatechars:20 }}</h4>
                             </a>
-                            <p class="mb-4">{{ post.fountain_church_description|truncatechars:70 }}</p>
+                            <p class="mb-4"style="font-family: 'serif';">{{ post.fountain_church_description|truncatechars:70 }}</p>
                         </div>
                         <center>
                             <div class="btn-wrapper">
@@ -86,10 +91,10 @@
         <div class="container">
             <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
                 <a href="{% url 'events' %}">
-                    <h2 class="mb-4" style="color: #d4af37; padding-left: 0; text-align: center; font-size: 1.5rem;" 
+                    <h1 class="mb-4" style="color: #d4af37; padding-left: 0; text-align: center; font-size: 2rem;" 
                         class="text-lg-start text-center">
                         Fountain of the living world church events
-                    </h2>
+                    </h1><br>
                 </a>
             </div>
             
@@ -121,16 +126,16 @@
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-2">Witnesses of Grace</h6>
-            </div><br><br>
+                <h1 class="mb-5" style="color: #d4af37;font-family: 'serif';">Witnesses of Grace</h1>
+            </div><br>
             <div class="owl-carousel testimonial-carousel position-relative" style="border-radius: 15px; overflow: hidden;">
                 {% for testimony_image in testimony_images %}
                 <div class="testimonial-item text-center" style="border-radius: 5px; overflow: hidden;">
                     <img class="border rounded-circle p-2 mx-auto mb-3" src="{{ testimony_image.fountain_church_minister_home_img.url }}" style="width: 80px; height: 80px; border-radius: 50%; border-radius:5px;">
-                    <h5 class="mb-0" style="color: #d4af37;">{{ testimony_image.fountain_church_minister_home_title }}</h5>
-                    <p>{{ testimony_image.fountain_church_minister_home_position }}</p>
+                    <h5 class="mb-0" style="color: #d4af37;font-family: 'serif';">{{ testimony_image.fountain_church_minister_home_title }}</h5>
+                    <p style="font-family: 'serif';">{{ testimony_image.fountain_church_minister_home_position }}</p>
                     <div class="testimonial-text bg-light text-center p-4" style="border-radius: 15px;">
-                        <p class="mb-0">{{ testimony_image.fountain_church_minister_home_description }}</p>
+                        <p class="mb-0"style="font-family: 'serif';">{{ testimony_image.fountain_church_minister_home_description }}</p>
                     </div>
                 </div>
                 {% endfor %}

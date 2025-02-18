@@ -9,10 +9,10 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h6 class="display-6 text-white animated slideInDown">Church Event </h6>
+                    <h6 class="display-6 text-white animated slideInDown"style="font-family: 'serif';">Church Event </h6>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}"style="font-family: 'serif';">Home</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -30,9 +30,9 @@
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-church text-primary mb-4"></i>
-                            <h5 class="mb-3">Sunday Service</h5>
-                            <p>Sunday School: 8:00 AM - 9:00 AM</p>
-                            <p>Sunday Service: 9:00 AM - 11: AM</p>
+                            <h5 class="mb-3style="font-family: 'serif';"">Sunday Service</h5>
+                            <p style="font-family: 'serif';">Sunday School: 8:00 AM - 9:00 AM</p>
+                            <p style="font-family: 'serif';">Sunday Service: 9:00 AM - 11: AM</p>
                         </div>
                     </div>
                 </div>
@@ -40,8 +40,8 @@
                     <div class="service-item text-center pt-3">
                         <div class="p-4"> 
                             <i class="fa fa-3x fa-church text- primary mb-4"></i>
-                            <h5 class="mb-3">Monday Service</h5>
-                            <p>Monday Prayer Meeting: 6:30 PM - 8:00 PM</p>
+                            <h5 class="mb-3"style="font-family: 'serif';">Monday Service</h5>
+                            <p style="font-family: 'serif';">Monday Prayer Meeting: 6:30 PM - 8:00 PM</p>
                         </div>
                     </div>
                 </div>
@@ -49,8 +49,8 @@
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-church text-primary mb-4"></i>
-                            <h5 class="mb-3">Wednesday Service</h5>
-                            <p>Wednesday Bible Study: 6:30 PM - 8:30 PM</p>
+                            <h5 class="mb-3"style="font-family: 'serif';">Wednesday Service</h5>
+                            <p style="font-family: 'serif';">Wednesday Bible Study: 6:30 PM - 8:30 PM</p>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Popular Events</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3"style="font-family: 'serif';">Popular Events</h6>
             </div><BR>
             <div class="row g-4 justify-content-center">
                 {% for post in object_list %}
@@ -77,12 +77,12 @@
                             </a>
                           
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="{% url 'events_article_detail' post.pk %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 10 10 30px;">Read More</a>
-                                <a href="{% url 'contact' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                                <a style="font-family: 'serif';"href="{% url 'events_article_detail' post.pk %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 10 10 30px;">Read More</a>
+                                <a style="font-family: 'serif';"href="{% url 'contact' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <a href="{% url 'events_article_detail' post.pk %}"> <h4 class="mb-0"style="color: #d4af37;">{{ post.Events_title|truncatechars:20}}</h4></a>
+                            <a href="{% url 'events_article_detail' post.pk %}"> <h4 class="mb-0"style="color: #d4af37;font-family: 'serif';">{{ post.Events_title|truncatechars:20}}</h4></a>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
@@ -90,11 +90,11 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                             </div>
-                            <p class="mb-4">{{ post.Events_description|truncatechars:70 }}</p>
+                            <p style="font-family: 'serif';"class="mb-4">{{ post.Events_description|truncatechars:70 }}</p>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{ post.Events_time }}</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>{{ post.Events_date_event }}</small>
+                            <small class="flex-fill text-center border-end py-2"style="font-family: 'serif';"><i class="fa fa-clock text-primary me-2"></i>{{ post.Events_time }}</small>
+                            <small class="flex-fill text-center py-2"style="font-family: 'serif';"><i class="fa fa-user text-primary me-2"></i>{{ post.Events_date_event }}</small>
                         </div>
                     </div>
                 </div>
