@@ -6,7 +6,7 @@
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
-        <div class="owl-carousel header-carousel position-relative">
+        
             {% for first_image in first_images %}
             <div class="owl-carousel-item position-relative">
                 <!--<img class="img-fluid" src="{{ first_image.fountain_church_img_img.url }}"style="height: 610px; width: 100%; object-fit: cover;"  alt="">-->
@@ -15,8 +15,13 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
+
+            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                <a href=" " class="flex-shrink-0 btn btn-lg btn-primary px-5 py-3" style="border-radius: 30px 30px; font-size: 10px;">Download Audio Message</a>.
+                <a href="https://www.youtube.com/@fountainofthelivingwordchu8992"target="_blank class="flex-shrink-0 btn btn-lg btn-primary px-5 py-3" style="border-radius: 30px 30px; font-size: 10px;">Watch Online</a>
+            </div>
+            
             {% endfor %}
-        </div>
     </div>
     <!-- Carousel End -->
 
