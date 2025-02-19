@@ -16,12 +16,14 @@
     new WOW().init();
 
 
-    // Sticky Navbar
+    // Sticky Navbar with Scroll Effect and Yellow Background
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $('.sticky-top').css('top', '0px');
+            $('.navbar').addClass('scrolled');  // Add the "scrolled" class for yellow background
         } else {
             $('.sticky-top').css('top', '-100px');
+            $('.navbar').removeClass('scrolled');  // Remove the "scrolled" class when back at the top
         }
     });
     
@@ -106,4 +108,3 @@
     });
     
 })(jQuery);
-
