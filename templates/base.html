@@ -54,30 +54,30 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="{% url 'home' %}" class="nav-item nav-link active" style="font-family: 'serif';">Home</a>
+            <a href="{% url 'home' %}" class="nav-item nav-link active" style="font-family: 'serif'; color: white;">Home</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-family: 'serif';">About</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-family: 'serif'; color: white;">About</a>
                 <div class="dropdown-menu fade-down m-0">
-                    <a href="{% url 'about' %}" class="dropdown-item" style="font-family: 'serif';">About Us</a>
-                    <a href="{% url 'vision' %}" class="dropdown-item" style="font-family: 'serif';">Vision & Mission</a>
+                    <a href="{% url 'about' %}" class="dropdown-item" style="font-family: 'serif'; ">About Us</a>
+                    <a href="{% url 'vision' %}" class="dropdown-item" style="font-family: 'serif'; ">Vision & Mission</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-family: 'serif';">Sermons</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-family: 'serif'; color: white;">Sermons</a>
                 <div class="dropdown-menu fade-down m-0">
-                    <a href="{% url 'sermons' %}" class="dropdown-item" style="font-family: 'serif';">Video Sermons</a>
-                    <a href="{% url 'audio_sermons' %}" class="dropdown-item" style="font-family: 'serif';">Audio Sermons</a>
+                    <a href="{% url 'sermons' %}" class="dropdown-item" style="font-family: 'serif'; ">Video Sermons</a>
+                    <a href="{% url 'audio_sermons' %}" class="dropdown-item" style="font-family: 'serif'; ">Audio Sermons</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-family: 'serif';">Media</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-family: 'serif'; color: white;">Media</a>
                 <div class="dropdown-menu fade-down m-0">
                     <a href="{% url 'events' %}" class="dropdown-item" style="font-family: 'serif';">News & Events</a>
-                    <a href="{% url 'galary' %}" class="dropdown-item" style="font-family: 'serif';">Gallery</a>
+                    <a href="{% url 'galary' %}" class="dropdown-item" style="font-family: 'serif'; ">Gallery</a>
                 </div>
             </div>
         </div>
-        <a href="{% url 'contact' %}" class="btn btn-primary py-4 px-lg-5" style="font-family: 'serif';">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
+        <a href="{% url 'contact' %}" class="nav-item nav-link active" style="font-family: 'serif'; color: white;">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
 <!-- Navbar End -->
