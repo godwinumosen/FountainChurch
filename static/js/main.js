@@ -11,10 +11,8 @@
     };
     spinner();
     
-    
     // Initiate the wowjs
     new WOW().init();
-
 
     // Sticky Navbar with Scroll Effect and Yellow Background
     $(window).scroll(function () {
