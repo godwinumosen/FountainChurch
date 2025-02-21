@@ -124,7 +124,7 @@ class ChurchGalary(models.Model):
     galary_img = models.ImageField(upload_to='galary_img/')
     galary_author = models.ForeignKey(User, on_delete=models.CASCADE)
     galary_date = models.DateTimeField (auto_now_add= True)
-
+    
     class Meta:
         ordering =['-galary_date']
     
