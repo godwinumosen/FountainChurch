@@ -288,10 +288,10 @@ video {
 }
 
 
-@media (max-width:68px) {
+@media (max-width:768px) {
     #video {
-        height: 240px; /* Adjust the height for mobile */
-        object-fit: contain; /* Ensure the whole video is visible */
+        height: 150px; /* Adjust the height for mobile */
+        object-fit: cover; /* Ensure the whole video is visible */
     }
 }
 
