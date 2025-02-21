@@ -6,20 +6,22 @@
     <!-- Carousel Start -->
    
         {% for first_image in first_images %}
-        <div class="owl-carousel-item position-relative">
+       
             <!-- Video with Italian-style elegance -->
 
             <video autoplay muted playsinline loop controls 
-            style="object-fit: cover; width: 100%; height: 100vh;">
+            style="object-fit: cover; width: 100%; height: 130vh;">
             <source src="{{ first_image.fountain_church_video.url }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        </div>
 
-        <div class="w-100 d-flex flex-column flex-sm-row justify-content-center position-absolute bottom-0 start-0 mb-4">
-            <a href="{% url 'audio_sermons' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 py-2 mb-3 mb-sm-0 mx-sm-2" style="border-radius: 30px 30px; font-size: 12px; font-family: 'serif'; white-space: nowrap;">Download Audio Message</a>
-            <a href="https://www.youtube.com/@fountainofthelivingwordchu8992" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 py-2 mx-sm-2" style="border-radius: 30px 30px; font-size: 10px; font-family: 'serif'; white-space: nowrap;">Watch Online</a>
+
+        <div class="w-100 d-flex flex-column align-items-center justify-content-center position-absolute bottom-0 start-0 mb-4">
+            <a href="{% url 'audio_sermons' %}" class="flex-shrink-0 btn btn-sm btn-primary px-4 py-2 mb-3 mx-2" style="border-radius: 30px 30px; font-size: 12px; font-family: 'serif'; max-width: 250px; text-align: center;">Download Audio Message</a>
+            <a href="https://www.youtube.com/@fountainofthelivingwordchu8992" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-4 py-2 mx-2" style="border-radius: 30px 30px; font-size: 10px; font-family: 'serif'; max-width: 250px; text-align: center;">Watch Online</a>
         </div>
+        
+        
         
         {% endfor %}
     
