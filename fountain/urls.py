@@ -13,7 +13,6 @@ urlpatterns = [
     #path('contact/', views.ContactView, name='contact'),
     path('contact/', ContactView.as_view(), name='contact'),
     path('message/', views.message, name='message'),
-    
     path('vision/', views.vision, name='vision'),
     path('events/', EventsView.as_view(), name="events"),
     path('events_article_detail/<int:pk>/', EventBlogArticleDetailView.as_view(), name='events_article_detail'),
