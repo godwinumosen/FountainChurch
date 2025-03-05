@@ -292,6 +292,7 @@ video {
     #video {
         height: 150px; /* Adjust the height for mobile */
         object-fit: cover; /* Ensure the whole video is visible */
+        width: 200px;
     }
 }
 
