@@ -296,8 +296,6 @@ video {
     }
   }
 
-
-
   /* Media Query for small devices (max-width: 768px) */
   @media (max-width: 768px) {
     .w-100 {
@@ -309,9 +307,6 @@ video {
       font-size: 12px;  /* Adjust font size for smaller screens */
     }
   }
-  
-
-  
 
 .service-item:hover * {
     color: var(--light) !important;
