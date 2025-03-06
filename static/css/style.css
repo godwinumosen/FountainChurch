@@ -297,26 +297,19 @@ video {
   }
 
 
-/* Default styling for larger screens */
-.w-100 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-bottom: 1rem; /* Small margin from the bottom */
-}
 
-/* Media Query for small devices (max-width: 768px) */
-@media (max-width: 768px) {
-  .w-100 {
-    position: relative;  /* Change to relative positioning for mobile */
-    margin-bottom: 2rem;  /* Move the buttons up from the bottom */
+  /* Media Query for small devices (max-width: 768px) */
+  @media (max-width: 768px) {
+    .w-100 {
+      position: relative;  /* Corrected to relative positioning for mobile */
+      margin-bottom: 2rem;  /* Move the buttons up from the bottom */
+    }
+  
+    .w-100 a {
+      font-size: 12px;  /* Adjust font size for smaller screens */
+    }
   }
-
-  .w-100 a {
-    font-size: 12px;  /* Adjust font size for smaller screens */
-  }
-}
+  
 
   
 
