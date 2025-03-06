@@ -323,8 +323,6 @@ video {
 .service-item:hover * {
     color: var(--light) !important;
 }
-
-
 /*** Categories & Courses ***/
 .category img,
 .course-item img {
