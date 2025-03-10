@@ -322,7 +322,6 @@ video {
     transform: scale(1.1);
 }
 
-
 /*** Team ***/
 .team-item img {
     transition: .5s;
@@ -331,7 +330,6 @@ video {
 .team-item:hover img {
     transform: scale(1.1);
 }
-
 
 /*** Testimonial ***/
 .testimonial-carousel::before {
